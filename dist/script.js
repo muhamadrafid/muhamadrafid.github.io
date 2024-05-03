@@ -30,26 +30,23 @@ window.addEventListener("click", function (e) {
   }
 });
 
-//  dark mode
-const darktoggle = document.querySelector("#dark-toggle");
-const html = document.querySelector("html");
+// Darkmode toggle
+const darkToggle = document.querySelector('#dark-toggle')
+const html = document.querySelector('html')
 
-darktoggle.addEventListener("click", function () {
-  if (darktoggle.Checked) {
-    html.classList.add("dark");
-    localStorage.theme = "dark";
+darkToggle.addEventListener('click', function() {
+  if (darkToggle.checked) {
+    html.classList.add('dark');
+    localStorage.theme = 'dark';
   } else {
-    html.classList.remove("dark");
-    localStorage.theme = "light";
+    html.classList.remove('dark');
+    localStorage.theme = 'light';
   }
 });
 
-// pindahkan posisi toggle sesuai mode
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-  document.documentElement.classList.add("dark");
-  darktoggle.Checked = true;
+// pindahkan toggle sesuai mode
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  darkToggle.checked = true;
 } else {
-  document.documentElement.classList.remove("dark");
-  darktoggle.Checked = false;
+  darkToggle.checked = false;
 }

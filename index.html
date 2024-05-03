@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/output.css" />
     <title>My Portofolio</title>
-    <script>
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+   <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark')
 } else {
   document.documentElement.classList.remove('dark')
 }
-    </script>
+   </script>
   </head>
   <body>
     <!-- Header start -->
@@ -54,7 +53,7 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
                 <li class="flex mt-2 items-center pl-8 lg:mt-0">
                   <div class="flex">
                     <span class="mr-2 text-sm text-slate-500">light</span>
-                    <input type="checkbox" class="hidden peer" id="dark-toggle" />
+                    <input type="checkbox" class="hidden " id="dark-toggle" />
                     <label for="dark-toggle">
                       <div class="flex h-5 w-9 cursor-grab items-center rounded-full bg-slate-500 p-1">
                         <div class="toggle-circle h-4 w-4 rounded-full bg-white transition-all duration-500 ease-in-out"></div>
